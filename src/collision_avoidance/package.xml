@@ -13,6 +13,8 @@
   <build_depend>geometry_msgs</build_depend>
   <build_depend>mavros_msgs</build_depend>
   <build_depend>rospy</build_depend>
+  <build_depend>livox_ros_driver</build_depend>
+  <exec_depend>livox_ros_driver</exec_depend>
   <exec_depend>rospy</exec_depend>
   <exec_depend>roscpp</exec_depend>
   <exec_depend>std_msgs</exec_depend>
