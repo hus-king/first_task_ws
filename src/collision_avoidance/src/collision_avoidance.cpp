@@ -173,7 +173,7 @@ int main(int argc, char **argv)
 
       //世界系前进
       case 2:
-        if (collision_avoidance_mission(2.0, 0.0, ALTITUDE, 0.0 , err_max))
+        if (collision_avoidance_mission(3.0, 0.0, ALTITUDE, 0.0 , err_max))
         {
           mission_num = 3;
           last_request = ros::Time::now();
