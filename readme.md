@@ -1,38 +1,40 @@
 # 避障
 
-## 飞机上使用
+## 使用说明
 
+### 编译项目
+
+```bash
 cd ~/first_task_ws
 catkin_make
+```
 
-后
+### 运行程序
 
+**实体飞机上运行:**
+
+```bash
 ./first_task_ws/src/collision_avoidance/shell/shell_for_330.sh
+```
 
-即可
+**仿真上运行:**
 
-飞行结束后输入
+```bash
+./first_task_ws/src/collision_avoidance/shell/shell_for_vmware.sh
+```
 
-tmux kill-server 结束任务
+若报错`tmux: command not found`，请先安装tmux:
 
-## 虚拟机上使用
+```bash
+sudo apt-get install tmux
+```
 
-虚拟机上要先安装Livox 官方的 ROS 驱动包
+### 结束任务
 
-# 进入你的工作空间 src 目录
-cd ~/first_task_ws/src
+飞行结束后输入以下命令:
 
-# 克隆官方驱动
-git clone https://github.com/Livox-SDK/livox_ros_driver.git
+```bash
+tmux kill-server
+```
 
-# 回到工作空间根目录编译
-cd ~/first_task_ws
-
-先单独编译livox_ros_driver
-
-catkin_make -DCATKIN_WHITELIST_PACKAGES="livox_ros_driver"
-
-再编译collision_avoidance
-
-catkin_make -DCATKIN_WHITELIST_PACKAGES="collision_avoidance"
-
+建议大家提前熟悉tmux的使用，可以参考[tmux入门教程](https://www.runoob.com/linux/linux-comm-tmux.html)。
